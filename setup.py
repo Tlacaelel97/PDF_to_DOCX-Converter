@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+
+from distutils.core import setup
+
+setup(name='PDFconverter',
+      version='0.1',
+      author='Tlacaelel Flores',
+      author_email='tlacaelel.flores@ramtechsolutions.com.mx',
+      url='',
+      download_url='',
+      description='',
+      long_description='',
+      packages=[''],
+      package_dir={'':'src'},
+      py_modules=[''],
+      provides=[''],
+      keywords='',
+      license='',
+      classifiers=['Development Status :: Alpha',
+                   'Intended Audience :: Developers',
+                   'Natural Language :: English',
+                   'Operating System :: OS Independent',
+                   'Programming Language :: Python :: 2.6+',
+                   'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
+                   'License :: OSI Approved :: GNU Affero General Public License v3',
+                   'Topic :: Internet',
+                   'Topic :: Scientific/Engineering :: GIS',
+                  ],
+       requires=[''],
+     )
