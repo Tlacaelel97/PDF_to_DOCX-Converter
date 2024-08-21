@@ -1,30 +1,36 @@
-# -*- coding: utf-8 -*-
+import pathlib
+from setuptools import find_packages, setup
 
-from distutils.core import setup
+HERE = pathlib.Path(__file__).parent
 
-setup(name='PDFconverter',
-      version='0.1',
-      author='Tlacaelel Flores',
-      author_email='tlacaelel.flores@ramtechsolutions.com.mx',
-      url='',
-      download_url='',
-      description='',
-      long_description='',
-      packages=[''],
-      package_dir={'':'src'},
-      py_modules=[''],
-      provides=[''],
-      keywords='',
-      license='',
-      classifiers=['Development Status :: Alpha',
-                   'Intended Audience :: Developers',
-                   'Natural Language :: English',
-                   'Operating System :: OS Independent',
-                   'Programming Language :: Python :: 3.11.6',
-                   'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
-                   'License :: OSI Approved :: GNU Affero General Public License v3',
-                   'Topic :: Internet',
-                   'Topic :: Scientific/Engineering :: GIS',
-                  ],
-       requires=[''],
-     )
+VERSION = '0.0.1' 
+PACKAGE_NAME = 'PDF-coverter' #Debe coincidir con el nombre de la carpeta 
+AUTHOR = 'Tlacaelel Jaime Flores Villaseñor' 
+AUTHOR_EMAIL = 'tlacaelel.flores@ramtechsolutions.com.mx' 
+URL = 'https://github.com/Tlacaelel97' 
+
+LICENSE = 'MIT' #Tipo de licencia
+DESCRIPTION = 'Librería para leer ficheros PDFs y extraer la información en formato str' #Descripción corta
+LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding='utf-8') #Referencia al documento README con una descripción más elaborada
+LONG_DESC_TYPE = "text/markdown"
+
+
+#Paquetes necesarios para que funcione la libreía. Se instalarán a la vez si no lo tuvieras ya instalado
+INSTALL_REQUIRES = [
+      'pymupdf'
+      ]
+
+setup(
+    name=PACKAGE_NAME,
+    version=VERSION,
+    description=DESCRIPTION,
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type=LONG_DESC_TYPE,
+    author=AUTHOR,
+    author_email=AUTHOR_EMAIL,
+    url=URL,
+    install_requires=INSTALL_REQUIRES,
+    license=LICENSE,
+    packages=find_packages(),
+    include_package_data=True
+)
