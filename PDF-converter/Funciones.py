@@ -28,7 +28,7 @@ def _create_path() -> tuple:
 
 
 def convert() -> None:
-    """MAnda a llamar a la funcion create_path y crea ambos paths
+    """Manda a llamar a la funcion create_path y crea ambos paths
     que se le suministran a pdf2docx para realizar la conversion del pdf y guardarlo en la
     dirección indicada, en caso de error, manda excepcion y finalmente cierra el converter.
 
@@ -36,7 +36,7 @@ def convert() -> None:
         None
 
     Returns:
-        None: MAnda mensaje a consola si funciona, o err en caso de excepcion
+        None: Manda mensaje a consola si funciona, o err en caso de excepcion
     """
     try:
         pdf_file, word_file = _create_path()
